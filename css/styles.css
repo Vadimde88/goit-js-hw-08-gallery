@@ -114,9 +114,6 @@ body {
   position: absolute;
   top: 2px;
   right: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 35px;
   height: 35px;
   padding: 0;
@@ -124,10 +121,8 @@ body {
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  color: #fff;
   cursor: pointer;
   transition: background-color var(--animation-duration) var(--timing-function);
-  outline: none;
   background-image: url('../images/iconClose.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -138,11 +133,7 @@ body {
   background-color: rgba(128,128,128,0.5);
 }
 
-.button-right {
-  border: none;
-  background-color: transparent;
-}
-
+.button-right,
 .button-left {
   border: none;
   background-color: transparent;
@@ -154,6 +145,15 @@ body {
   width: 80px;
   height: 80px;
 }
+
+.arrow-left {
+  position: absolute;
+  margin-left: -100px;
+  width: 80px;
+  height: 80px;
+  transform: rotate(180deg);
+}
+
 .arrow-left path,
 .arrow-right path  {
   fill: #BFE2FF;
@@ -161,13 +161,6 @@ body {
   stroke: #337AB7;   
   transition: fill 0.5s ease-out;
   cursor: pointer;
-}
-.arrow-left {
-  position: absolute;
-  margin-left: -100px;
-  width: 80px;
-  height: 80px;
-  transform: rotate(180deg);
 }
 
 .arrow-left path:hover,
